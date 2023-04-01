@@ -1,8 +1,8 @@
-resource "aws_s3_bucket" "dev4" {
-  bucket = "bk-dev4"
+resource "aws_s3_bucket" "server-02" {
+  bucket = "bk-server-02"
   acl    = "private"
 
   tags = {
-    Name = "dev4"
+    Name = "server-02"
   }
 }

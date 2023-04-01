@@ -6,14 +6,14 @@ resource "aws_security_group" "ssh" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    # cidr_blocks = ["177.223.175.65/32"]
+    cidr_blocks = var.cidr_blocks
   }
 
   egress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    # cidr_blocks = ["177.223.175.65/32"]
+    cidr_blocks = var.cidr_blocks
   }
 
   tags = {
@@ -30,14 +30,14 @@ resource "aws_security_group" "ssh-us-east-2" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["177.223.175.65/32"]
+    cidr_blocks = var.cidr_blocks
   }
 
   egress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["177.223.175.65/32"]
+    cidr_blocks = var.cidr_blocks
   }
 
   tags = {
